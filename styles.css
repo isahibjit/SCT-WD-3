@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Permanent Marker", system-ui;
+}
+header{
+    height: 10vh;
+    background-color:#b388eb;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+nav span{
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+}
+.container{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 23px;
+}
+.gameContainer{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+}
+.box{
+    text-align: center;
+    border: 1px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    color:#1446a0 ;
+}
+.box:hover{
+    background-color: #ebebd3;
+}
+.box:first-child,
+.box:nth-child(2),
+.box:nth-child(3){
+    border-top: none;
+}
+.box:nth-child(3n+1){
+    border-left: none;
+}
+.box:nth-child(3n+3){
+    border-right: none;
+}
+.box:nth-child(7),
+.box:nth-child(8),
+.box:last-child{
+    border-bottom: none;
+}
+.optionContainer{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  
+}
+
+.reset{
+    margin: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px 40px;
+    border-radius: 8px;
+    background-color: #72ddf7;
+    cursor: pointer;
+    border: none;
+}
+.reset:hover{
+    background-color: #68bfd4;
+}
+.bottomContainer{
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width:1024px){
+    img{
+        width: 15vw;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+img{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+img.show{
+    opacity: 1;
+}
+
+.turn{
+
+    width: 10vw;
+}
